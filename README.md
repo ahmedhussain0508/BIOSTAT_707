@@ -1,3 +1,9 @@
 # BIOSTAT 707 — Checkpoint 1 (PhysioNet/CinC Challenge 2012, set-a)
 
-Place the raw data at `data/set-a/<RecordID>.txt` (4000 files) and `data/Outcomes-a.txt` (downloaded from https://physionet.org/content/challenge-2012/1.0.0/ and unzipped; `data/` is gitignored and never committed), then from the repo root run `pixi run --locked checkpoint1`. That single command installs the pinned Python/R environment from `pixi.lock`, executes `checkpoint1.ipynb` top to bottom in a fresh kernel, and writes to `output/`: `set-a_long.csv` (one row per measurement, with time), `set-a_wide.csv` (one row per record with per-variable summaries joined to outcomes), and `checkpoint1.html`, the self-contained rendered notebook with all tables and figures embedded. Only `output/checkpoint1.html` is committed; everything else under `output/` is regenerated on each run.
+1. Download dataset-a from https://physionet.org/content/challenge-2012/1.0.0/ and unzip so the repo root contains `data/set-a/<RecordID>.txt` (4000 files) and `data/Outcomes-a.txt`. `data/` is gitignored.
+2. From the repo root run `pixi run --locked checkpoint1`. This installs the pinned environment from `pixi.lock` and runs `checkpoint1.ipynb` top to bottom.
+3. Files written to `output/`:
+   - `set-a_long.csv` — one row per measurement, as loaded
+   - `set-a_wide.csv` — one row per record: descriptors, per-variable summaries, outcomes
+   - `checkpoint1.html` — the rendered notebook with all tables and figures
+4. Only `output/checkpoint1.html` is committed; everything else in `output/` is regenerated on each run.
