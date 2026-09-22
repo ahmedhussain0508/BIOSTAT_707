@@ -7,3 +7,5 @@
    - `set-a_wide.csv` — one row per record: descriptors, per-variable summaries, outcomes
    - `checkpoint1.html` — the rendered notebook with all tables and figures
 4. Only `output/checkpoint1.html` is committed; everything else in `output/` is regenerated on each run.
+
+*** AI Use Statement is provided at the end of notebook. The majority of code was generated with AI help in step by step rather than hands-off agentic way.
